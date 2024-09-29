@@ -60,7 +60,7 @@ const Summary = () => {
         <TourDataRow
           source={require("@assets/images/leaf.png")}
           title="Unikniesz emisji CO2:"
-          value="31.33z ł"
+          value="0.94kg"
           className="mt-3"
         />
       </View>
