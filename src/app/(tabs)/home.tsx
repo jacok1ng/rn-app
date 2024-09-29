@@ -1,11 +1,23 @@
-import { View, Text } from "react-native"
-import React from "react"
+import { ScrollView } from "react-native"
+import { StatusBar } from "expo-status-bar"
+import {
+  DestinationPicker,
+  DiscoverNewTours,
+  Info,
+  LastTrip,
+} from "@components"
 
 const Home = () => {
   return (
-    <View>
-      <Text>Home</Text>
-    </View>
+    <>
+      <ScrollView className="ml-6 pt-9">
+        <DestinationPicker />
+        <LastTrip />
+        <DiscoverNewTours />
+        <Info />
+      </ScrollView>
+      <StatusBar style="dark" />
+    </>
   )
 }
 

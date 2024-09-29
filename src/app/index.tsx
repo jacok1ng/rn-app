@@ -1,16 +1,15 @@
-import { Text } from "react-native"
-import { SafeAreaView } from "react-native-safe-area-context"
-import { Link } from "expo-router"
-import { Component } from "@components"
+import { ScrollView } from "react-native"
+import { StatusBar } from "expo-status-bar"
+import {
+  DestinationPicker,
+  DiscoverNewTours,
+  Info,
+  LastTrip,
+} from "@components"
+import { Redirect } from "expo-router"
 
 const Index = () => {
-  return (
-    <SafeAreaView>
-      <Text className="">Index</Text>
-      <Link href={{ pathname: "/(tabs)/home" }}>Home</Link>
-      <Component />
-    </SafeAreaView>
-  )
+  return <Redirect href="/(tabs)/home" />
 }
 
 export default Index

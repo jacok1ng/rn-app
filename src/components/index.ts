@@ -1,1 +1,3 @@
-export { default as Component } from "./Component"
+export * from "./home"
+export * from "./shared"
+export * from "./newTour"
