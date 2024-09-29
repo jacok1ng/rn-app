@@ -1,14 +1,26 @@
 import { View, Text, Pressable, PressableProps } from "react-native"
 
-interface ButtnoProps extends PressableProps {
+interface ButtonProps extends PressableProps {
   title: string
+  secondary?: boolean
 }
 
-const Button = ({ title }: ButtnoProps) => {
+// viewStyle="bg-white border-2 border-dashed border-m-pink"
+
+const Button = ({ title, secondary, ...props }: ButtonProps) => {
+  let styles = ""
+
+  if (secondary) styles = "border-2 border-m-pink bg-white"
+  else styles = "bg-m-pink"
+
   return (
-    <Pressable>
-      <View className="bg-m-pink rounded-lg py-3 text-center">
-        <Text className="font-psemibold text-center text-white">{title}</Text>
+    <Pressable {...props}>
+      <View className={`rounded-lg py-3 text-center ${styles}`}>
+        <Text
+          className={`text-center font-psemibold ${secondary ? "text-m-pink" : "text-white"}`}
+        >
+          {title}
+        </Text>
       </View>
     </Pressable>
   )

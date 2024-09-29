@@ -1,9 +1,6 @@
-import { Header } from "@components"
+import { Header } from "@components/shared"
 import { Tabs } from "expo-router"
-import { Image, Text, View } from "react-native"
-
-const Logo = () => <Image source={require("@assets/images/logo.png")} />
-const Menu = () => <Image source={require("@assets/images/menu.png")} />
+import { Image } from "react-native"
 
 const Layout = () => {
   return (
@@ -11,13 +8,29 @@ const Layout = () => {
       <Tabs.Screen
         name="home"
         options={{
+          tabBarLabel: "Strona Główna",
           header: () => <Header title="Strona Główna" />,
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={require("@assets/images/leaf.png")}
+              className="h-[20px] w-[20px]"
+              tintColor={focused ? "#D13984" : "gray"}
+            />
+          ),
         }}
       />
       <Tabs.Screen
         name="newTour"
         options={{
+          tabBarLabel: "Nowa Trasa",
           header: () => <Header title="Nowa trasa" />,
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={require("@assets/images/leaf.png")}
+              className="h-[20px] w-[20px]"
+              tintColor={focused ? "#D13984" : "gray"}
+            />
+          ),
         }}
       />
     </Tabs>

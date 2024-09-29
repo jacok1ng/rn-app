@@ -3,7 +3,11 @@ module.exports = {
   content: ["./App.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      colors: { "m-pink": "#D13984", divider: "#C4D0EA" },
+      colors: {
+        "m-pink": "#D13984",
+        divider: "#C4D0EA",
+        "light-blue": "#EEF2FC",
+      },
       fontFamily: {
         pthin: ["Poppins-Thin", "sans-serif"],
         pextralight: ["Poppins-ExtraLight", "sans-serif"],

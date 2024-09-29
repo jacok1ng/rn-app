@@ -1,8 +1,9 @@
 import { Text, View } from "react-native"
 import React from "react"
-import { Button, CircleIcon, ImageButton } from "@components"
+import { Button, CircleIcon, ImageButton } from "@components/shared"
 import PickerItem from "./PickerItem"
 import Arrows from "./Arrows"
+import { router } from "expo-router"
 
 const LocalizationPicker = () => {
   return (
@@ -27,7 +28,7 @@ const LocalizationPicker = () => {
               source={require("@assets/images/plus.png")}
               viewStyle="bg-white border-2 border-dashed border-m-pink"
             />
-            <Text className="font-psemibold ml-2.5 text-sm">
+            <Text className="ml-2.5 font-psemibold text-sm">
               Dodaj przystanek
             </Text>
           </View>
@@ -37,7 +38,7 @@ const LocalizationPicker = () => {
         </View>
       </View>
       <View className="mt-5">
-        <Button title="Znajdź trasy" />
+        <Button title="Znajdź trasy" onPress={() => router.push("/yourTour")} />
       </View>
     </View>
   )

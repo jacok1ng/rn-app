@@ -1,6 +1,7 @@
 import { Stack } from "expo-router"
 import { useFonts } from "expo-font"
 import { Image } from "react-native"
+import { Header } from "@components/shared"
 
 const Logo = () => <Image source={require("@assets/images/logo.png")} />
 const Menu = () => <Image source={require("@assets/images/menu.png")} />
@@ -23,6 +24,12 @@ const RootLayout = () => {
         name="(tabs)"
         options={{
           headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="yourTour"
+        options={{
+          header: () => <Header title="Twoja trasa" />,
         }}
       />
     </Stack>

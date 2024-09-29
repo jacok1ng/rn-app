@@ -66,7 +66,7 @@ const Item = ({ address, city, path, divider }: ItemProps) => (
         <Image source={require("@assets/images/right_arrow.png")} />
       </View>
     </View>
-    {divider && <View className="bg-divider h-px" />}
+    {divider && <View className="h-px bg-divider" />}
   </>
 )
 
@@ -82,7 +82,7 @@ const SuggestedTours = () => {
       /> */}
       {/* <ScrollView contentContainerStyle={{ marginBottom: 20 }}> */}
       {data.map((item, index) => (
-        <Item {...item} divider={index !== data.length - 1} />
+        <Item {...item} key={item.city} divider={index !== data.length - 1} />
       ))}
       {/* </ScrollView> */}
     </View>

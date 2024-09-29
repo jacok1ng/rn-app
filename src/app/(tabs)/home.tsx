@@ -5,7 +5,7 @@ import {
   DiscoverNewTours,
   Info,
   LastTrip,
-} from "@components"
+} from "@components/home"
 
 const Home = () => {
   return (

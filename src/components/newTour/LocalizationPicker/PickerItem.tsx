@@ -1,5 +1,5 @@
 import { View, Text, ImageSourcePropType } from "react-native"
-import { CircleIcon } from "@components"
+import { CircleIcon } from "@components/shared"
 
 interface PickerItemProps {
   title: string
@@ -11,9 +11,9 @@ const PickerItem = ({ source, title, showDivider }: PickerItemProps) => (
   <>
     <View className="flex-row items-center">
       <CircleIcon source={source} />
-      <Text className="font-psemibold ml-2.5 text-sm">{title}</Text>
+      <Text className="ml-2.5 font-psemibold text-sm">{title}</Text>
     </View>
-    {showDivider && <View className="bg-divider mt-3 h-px" />}
+    {showDivider && <View className="mt-3 h-px bg-divider" />}
   </>
 )
 

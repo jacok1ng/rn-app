@@ -1,5 +1,9 @@
 import { ScrollView } from "react-native"
-import { CollapseMock, LocalizationPicker, SuggestedTours } from "@components"
+import {
+  CollapseMock,
+  LocalizationPicker,
+  SuggestedTours,
+} from "@components/newTour"
 
 const newTour = () => {
   return (
