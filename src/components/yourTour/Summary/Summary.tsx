@@ -1,6 +1,7 @@
 import { View, Text, Image } from "react-native"
 import InfoBox from "./InfoBox"
 import TourDataRow from "./TourDataRow"
+import PlacesOnWay from "../PlacesOnWay"
 
 const Summary = () => {
   return (

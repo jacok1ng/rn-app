@@ -1,6 +1,6 @@
 import { Image, ScrollView } from "react-native"
 import { StatusBar } from "expo-status-bar"
-import { Actions, Summary } from "@components/yourTour"
+import { Actions, PlacesOnWay, Summary } from "@components/yourTour"
 
 const yourTour = () => {
   return (
@@ -12,6 +12,7 @@ const yourTour = () => {
           resizeMode="stretch"
         />
         <Summary />
+        <PlacesOnWay />
         <Actions />
       </ScrollView>
       <StatusBar style="dark" />

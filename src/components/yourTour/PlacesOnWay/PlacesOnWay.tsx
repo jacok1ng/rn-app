@@ -1,24 +1,6 @@
-import {
-  View,
-  Text,
-  FlatList,
-  Image,
-  ImageSourcePropType,
-  ScrollView,
-} from "react-native"
-import React from "react"
+import { Image, ImageSourcePropType, Text, View } from "react-native"
 
 const data = [
-  {
-    address: "ul. Grodzka 12",
-    city: "Kraków",
-    path: require("@assets/images/cracow.png"),
-  },
-  {
-    address: "ul. Słowackiego 4",
-    city: "Oświęcim",
-    path: require("@assets/images/oswiecim.jpg"),
-  },
   {
     address: "ul. Lwowska 7",
     city: "Nowy Sącz",
@@ -28,11 +10,6 @@ const data = [
     address: "ul. Kościelna 3",
     city: "Zakopane",
     path: require("@assets/images/zakopane.jpg"),
-  },
-  {
-    address: "ul. Krakowska 5",
-    city: "Chrzanów",
-    path: require("@assets/images/chrzanow.jpg"),
   },
   {
     address: "ul. Dembowskiego 2",
@@ -63,16 +40,20 @@ const Item = ({ address, city, path, divider }: ItemProps) => (
         </View>
       </View>
       <View className="w-2/12 flex-row items-center justify-end">
-        <Image source={require("@assets/images/right_arrow.png")} />
+        <Image source={require("@assets/images/plus.png")} />
       </View>
     </View>
     {divider && <View className="h-px bg-divider" />}
   </>
 )
 
-const SuggestedTours = () => {
+const PlacesOnWay = () => {
   return (
-    <View className="mb-10 mt-5 rounded-md bg-white px-4">
+    <View className="mb-10 rounded-md bg-white px-4 pt-4">
+      <Text className="font-psemibold text-base">Obiekty na trasie</Text>
+      <Text className="mb-3 font-pregular text-xs">
+        Oto co warto zobaczyć po drodze
+      </Text>
       {data.map((item, index) => (
         <Item {...item} key={item.city} divider={index !== data.length - 1} />
       ))}
@@ -80,4 +61,4 @@ const SuggestedTours = () => {
   )
 }
 
-export default SuggestedTours
+export default PlacesOnWay
